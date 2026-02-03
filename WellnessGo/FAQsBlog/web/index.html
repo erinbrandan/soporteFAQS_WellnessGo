@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog de FAQs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 class="header-logo">
+    <img src="img/logo.png" alt="Logo WellnessGo" class="logo-faq">
+    Preguntas Frecuentes de WellnessGo
+</h1>
+
+<div class="faq-container">
+    <details class="faq-item">
+        <summary>
+            ¿Cómo puedo pedir una cita?
+        </summary>
+        <div class="faq-content">
+            <p>Debes acceder a la sección "Nueva Cita" en la app. En ella tendrás que seguir las pantallas seleccionando la especialidad, el doctor, la fecha y la hora de tu cita y por último una breve descripción del motivo de tu cita.</p>
+        </div>
+    </details>
+    <details class="faq-item">
+        <summary>
+            ¿Puedo cambiar o cancelar una cita ya programada?
+        </summary>
+        <div class="faq-content">
+            <p>Sí. Ve a la sección "Mis Citas". Puedes modificar o cancelar una cita con al menos 24 horas de antelación sin coste alguno.</p>
+        </div>
+    </details>
+    <details class="faq-item">
+        <summary>
+            ¿Qué debo hacer si no encuentro mi especialista?
+        </summary>
+        <div class="faq-content">
+            <p>Verifica que hayas seleccionado correctamente la Especialidad.</p>
+        </div>
+    </details>
+    <details class="faq-item">
+        <summary>
+            ¿Cómo sé si mi cita fue confirmada?
+        </summary>
+        <div class="faq-content">
+            <p>La cita aparecerá en la sección "Mis Citas".</p>
+        </div>
+    </details>
+    <details class="faq-item">
+        <summary>
+            ¿Cómo actualizo mi información personal (perfil)?
+        </summary>
+        <div class="faq-content">
+            <p>Accede a la sección "Mis Documentos" en la app. Podrás modificar tu nombre y datos de contacto.</p>
+        </div>
+    </details>
+    <details class="faq-item">
+        <summary>
+            Olvidé mi contraseña, ¿qué hago?
+        </summary>
+        <div class="faq-content">
+            <p>En la pantalla de soporte haz clic sobre el correo, te llevará directamente a tu aplicación de correo, cambia el asunto a CONTRASEÑA e indicanos tu DNI, nos pondremos en contacto contigo lo antes posible.</p>
+        </div>
+    </details>
+</div>
+<div class="contact-container">
+    <h2>¿No encuentras un apartado que resuelva tu duda? ¡Escríbenos!</h2>
+    <p>Utiliza el siguiente formulario para enviarnos tu pregunta directamente.</p>
+
+    <form action="mailto:admin@wellnessgo.com" method="post" enctype="text/plain" class="contact-form">
+
+        <label for="pregunta-cliente" class="sr-only">Escribe tu pregunta</label>
+
+        <textarea
+                id="pregunta-cliente"
+                name="pregunta"
+                rows="5"
+                placeholder="Escribe aquí tu pregunta o comentario..."
+                required
+        ></textarea>
+
+        <button type="submit" class="submit-btn">
+            Enviar Pregunta por Correo
+        </button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

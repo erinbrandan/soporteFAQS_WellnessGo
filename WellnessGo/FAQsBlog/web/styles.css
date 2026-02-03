@@ -1,0 +1,189 @@
+/* =======================================
+   REGLAS GLOBALES Y FONDO (BODY)
+   ======================================= */
+body {
+    /* Gradiente suave de la parte superior (cian) a la inferior (verde oscuro) imita fondo app*/
+    background: linear-gradient(to bottom, #00a9b8, #006c58);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* =======================================
+   CONTENEDOR PRINCIPAL DE LA PÁGINA
+   ======================================= */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 20px auto; /* Más espacio arriba para separar del encabezado */
+    padding: 20px;
+
+    /* Fondo BLANCO SEMI-TRANSPARENTE */
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+    color: #333333;
+}
+
+/* =======================================
+   ENCABEZADO (TÍTULO Y LOGO)
+   ======================================= */
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 10px 0; /* Espacio superior e inferior */
+    margin: 0; /* Eliminar el margin: 20px auto; */
+}
+
+.logo-faq {
+    height: 50px; /* Tamaño logo */
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: white; /* Texto blanco para un contraste nítido sobre el fondo oscuro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra sutil para destacar */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* =======================================
+   ESTILOS DE ACORDEÓN (DETAILS/SUMMARY)
+   ======================================= */
+.faq-item {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-bottom: 12px; /* Espacio entre ítems */
+    overflow: hidden; /* Asegura que el contenido respete el border-radius */
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #f7f7f7; /* Ligero hover para interacción */
+}
+
+/* Estilo para la pregunta  */
+.faq-item summary {
+    padding: 18px 20px;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    list-style: none; /* Elimina la flecha predeterminada del navegador */
+    position: relative;
+    /* Línea de fondo tenue para separar la pregunta del contenido (si está abierto) */
+    border-bottom: 1px solid transparent;
+}
+
+/* Estilo de la pregunta cuando está abierta (se añade una línea separadora) */
+.faq-item[open] summary {
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Flecha de control de apertura/cierre */
+.faq-item summary::after {
+    content: '▶'; /* Flecha derecha (cerrado) */
+    font-size: 0.8em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    color: #00a9b8; /* Color de acento de la marca */
+}
+
+/* Flecha de control cuando está abierto */
+.faq-item[open] summary::after {
+    content: '▼'; /* Flecha hacia abajo (abierto) */
+}
+
+/* Estilo para la respuesta (el div de contenido) */
+.faq-content {
+    padding: 15px 20px 20px 20px;
+    font-size: 1em;
+    color: #555555;
+}
+
+.faq-content p {
+    margin: 0; /* Eliminar el margen predeterminado de los párrafos dentro de la respuesta */
+}
+/* =======================================
+   REGLAS PARA EL CONTENEDOR DE CONTACTO
+   ======================================= */
+.contact-container {
+    /* Mismas propiedades de "tarjeta" que el contenedor de FAQ */
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Centra el texto del encabezado */
+}
+
+.contact-container h2 {
+    font-size: 1.5em;
+    color: #333333; /* Color verde oscuro de la marca */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario y textarea */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    resize: vertical; /* Permite al usuario ajustar la altura */
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+}
+
+/* Estilo del botón de envío */
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #00a9b8; /* Color cian de la marca */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #008f9c; /* Un tono más oscuro al pasar el ratón */
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+/* Regla para ocultar etiquetas para lectores de pantalla si es necesario */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

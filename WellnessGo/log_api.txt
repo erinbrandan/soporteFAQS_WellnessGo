@@ -1,0 +1,3 @@
+2025-11-16 13:11:37 - OK - /citas/profesional/12345678A
+2025-11-16 13:25:31 - OK - /citas/cliente
+2025-11-16 13:25:38 - OK - /citas
